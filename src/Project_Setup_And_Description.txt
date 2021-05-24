@@ -1,0 +1,39 @@
+*** Before writing the code It's a sincere request to spend some time on demos and try to interpret the execution 
+	flow and how hibernate works.
+
+1. Check the hibernate.cfg.xml and put the connection details as per your database setup.
+2. Table structures are present in the TableScript.sql file. Execute those queries in your database.
+3. Create the entities and put those mappings in hibernate.cfg.xml file.
+4. You have implement the below packages.
+	- entity
+	- service
+	- dao
+	-ui
+5. Your code flow should follow the below order
+	ui -> service -> dao and vice versa
+6. Add all those hibernate required jars and the database connector jar(depends on the used database) to classpath.
+7. The code is partially implemented and you have to make it a simulated code with dummy data.
+
+Use case description
+------------------------------
+1. One mobile number can be mapped to multiple credit card. But multiple mobile number can't be marked to a credit card.
+2. Without a mobile number credit card can't exist. But without a credit card mobile number exists.
+3. Credit card can't be added to the database without mobile details. But mobile number can be added and later multiple
+   credit cards can be mapped to that number.
+4. If you want to delete a credit card then the reference must be deleted for future purpose. But if you want to delete
+   a mobile number then all the mapped credit cards must be deleted. The same logic works for updated flow as well 
+   to make the data consistent.
+   
+   The whole assignment can be considered as an One to Many relationship between MobileNumber and Credit Card.
+   	
+   				One to Many
+   MobileNumber------------->Credit Card
+   
+*** If you are considering any assumptions from your end put that in comment in the place of implementation.
+*** Please follow the demo document for setup the project and make it runnable in your system.
+
+Please reach to me if you have any queries.
+mail : akash.maharana@accolitedigital.com
+Phone : 8390280006
+
+Assignment Submission Deadline : 30th May 2021
